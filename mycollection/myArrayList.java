@@ -1,10 +1,11 @@
 package mycollection;
 
-import java.util.ArrayList;
+import java.util.*;
 
 class myArrayList {
     public static void main(String[] args) {
         ArrayList <String> list1 = new ArrayList<>();
+        HashMap <String,String> map = new HashMap<String,String>();
         list1.add("salam");
         list1.add("dunya");
         list1.set(1,"zzzz");
