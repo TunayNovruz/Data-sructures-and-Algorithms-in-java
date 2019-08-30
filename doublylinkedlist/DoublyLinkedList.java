@@ -17,7 +17,7 @@ public class DoublyLinkedList <T> {
             newNode.prev = tail;
             tail = newNode;
 
-            // ikinci yol
+            // ikinci ve uzun  yol
             /* 
                 DoublyListNode<T> temp = root;
                 while(temp.next != null){
@@ -62,6 +62,9 @@ public class DoublyLinkedList <T> {
 
     T remove(int index){
         T result = null ;
+        if(size == 0){
+            return null;
+        }
         if(index == 0){
             result  = root.data;
             root = root.next;

@@ -16,7 +16,6 @@ class CircularLinkedList <T>{
             last = newNode;
             first.prev = last;
             last.next = first;
-
         }
         size++;
     }
