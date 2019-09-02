@@ -11,9 +11,10 @@ class DoublyResult{
         //myList.printList();
 
         String str = myList.get(0);
-        //System.out.println(str);
+        System.out.println(str);
         String removed = myList.remove(2);
-        //myList.printTraverse();
+        System.out.println(removed);
+        myList.printTraverse();
         myList.printList();
 
 

@@ -21,7 +21,7 @@ class CircularLinkedList <T>{
     }
 
     void printList(){
-        ListNode temp = first;
+        ListNode <T> temp = first;
         for(int i = 0; temp!=null;i++){
             System.out.println(temp.data);
             temp = temp.next;
