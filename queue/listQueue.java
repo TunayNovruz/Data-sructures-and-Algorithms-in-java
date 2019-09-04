@@ -37,4 +37,11 @@ class ListQueue <E> {
         }
     }
 
+    E peek(){
+        if(last == null){
+            return null;
+        }
+        return last.data;
+    }
+
 }
