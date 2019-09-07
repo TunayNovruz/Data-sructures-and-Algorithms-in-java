@@ -31,21 +31,22 @@ class BinarySearchTree <T extends Integer> {
             System.out.println(temp.data + "inserted");
         }
 
-        
-        //addChild(root,newChild);
+        //ikinci  üsul
+        // root = addChild(root,newChild);
     }
 
-    // rekursiv üsul tam deyil,gələcəkdə birdə baxacam
-    void addChild(BSTNode<T>node, BSTNode<T>child){
+    // rekursiv üsul 
+    BSTNode<T> addChild(BSTNode<T>node, BSTNode<T>child){
         if(node == null){
             node = child;
         }else{
             if(child.data <= node.data){
-                addChild(node.left,child);
+                node.left = addChild(node.left,child);
             }else{
-                addChild(node.right,child);
+                node.right = addChild(node.right,child);
             }
         }
+        return node;
     }
 
     BSTNode<T> findByValue(T value){    
