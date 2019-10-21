@@ -39,7 +39,6 @@ class HashMap<E,T>{
     int getHash(E key){
         int hash = key.hashCode()%this.capacity;
         if(hash <0) hash *=-1;
-        System.out.println(hash+"---");
         return hash;
     }
 
