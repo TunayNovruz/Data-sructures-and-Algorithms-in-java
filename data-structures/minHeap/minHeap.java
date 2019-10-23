@@ -1,5 +1,0 @@
-package minHeap;
-
-class minHeap{
-    
-}
