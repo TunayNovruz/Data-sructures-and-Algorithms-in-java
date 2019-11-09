@@ -1,5 +1,7 @@
 package com.problems.hackerrank;
 
+import java.math.BigInteger;
+
 public class BigSort {
 
     public static void main(String[] args) {
@@ -16,10 +18,16 @@ public class BigSort {
         for (int i = 0; i < len - 1; i++) {
             int min_index = i;
             for (int j = i + 1; j < len; j++) {
-                if (unsorted[j].length() < unsorted[min_index].length())
+                if (unsorted[j].length() < unsorted[min_index].length()) {
                     min_index = j;
+                }
                 else if (unsorted[j].length() == unsorted[min_index].length()) {
-                    int chLen = unsorted[j].length();
+                    BigInteger first = new BigInteger(unsorted[j]);
+                    BigInteger second = new BigInteger(unsorted[min_index]);
+                    if(first.compareTo(second) < 0 ){
+                        min_index = j;
+                    }
+                    /*int chLen = unsorted[j].length();
                     for (int k = 0; k < chLen; k++) {
                         if (unsorted[j].charAt(k) < unsorted[min_index].charAt(k)) {
                             min_index = j;
@@ -27,7 +35,7 @@ public class BigSort {
                         } else if (unsorted[j].charAt(k) > unsorted[min_index].charAt(k)) {
                             break;
                         }
-                    }
+                    }*/
                 }
             }
             swap(unsorted, i, min_index);
